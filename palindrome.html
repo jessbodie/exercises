@@ -6,33 +6,6 @@
         </h1>
             <input type="text" size="45" id="palInput">
             <button type="button" id="palBtn">Check</button>
-        <script>
-            document.getElementById('palBtn').addEventListener('click', function () {
-                palindromeChecker(document.getElementById('palInput').value);
-            });
-            document.getElementById('palInput').addEventListener('keyup', function (e) {
-                if (e.keyCode === 13) {
-                    palindromeChecker(e.target.value);
-                }
-            });
-
-            function palindromeChecker (pal) {
-                pal = pal.toLowerCase();
-                let arr = pal.split('');
-                arr = arr.filter(p => p !== ' ');
-                let palindromeStatus;
-                for (let i = 0; i < arr.length; i++) {
-                    if (arr[i] === arr[arr.length - i - 1]) {
-                        palindromeStatus = true;
-                    } else {
-                        alert('Sorry, this is not a palindrome');
-                        return palindromeStatus = false;
-                    }
-                }
-                if (palindromeStatus) {
-                    alert('This is a palindrome!')
-                }
-            }
-        </script>
+    <script src="palindrome.js" type=""></script>        
     </body>
 </html>
