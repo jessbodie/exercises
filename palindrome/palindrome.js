@@ -10,12 +10,10 @@ document.getElementById('palInput').addEventListener('keyup', function (e) {
 function palindromeChecker (pal) {
     pal =((pal.toLowerCase()).split('')).filter(p => p !== ' ');
     for (let i = 0; i < (pal.length/2); i++) {
-        if (pal[i] === pal[pal.length - i - 1]) {
-            palindromeStatus = true;
-        } else {
+        if (pal[i] !== pal[pal.length - i - 1]) {
             alert('Sorry, this is not a palindrome');
             return;
-        }
+        } 
     }
     alert('This is a palindrome!')
 }
